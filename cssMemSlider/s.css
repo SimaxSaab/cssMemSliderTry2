@@ -162,6 +162,8 @@ input#third:checked ~ .footer .descs .desc:nth-child(3),
 input#fourth:checked ~ .footer .descs .desc:nth-child(4),
 input#fifth:checked ~ .footer .descs .desc:nth-child(5) {
   opacity: 1;
+  -webkit-animation: show 2s cubic-bezier(.5, -1, .5, 2);
+          animation: show 2s cubic-bezier(.5, -1, .5, 2);
 }
 
 input#first:checked ~ .footer .display li:nth-child(1) label div,
@@ -180,4 +182,26 @@ input#fourth:checked ~ .footer .display li:nth-child(4) label div:hover,
 input#fifth:checked ~ .footer .display li:nth-child(5) label div:hover {
   border: 0.5vh solid #fff;
   background: transparent;
+}
+
+@-webkit-keyframes show {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes show {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
