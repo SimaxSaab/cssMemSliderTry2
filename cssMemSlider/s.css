@@ -163,3 +163,21 @@ input#fourth:checked ~ .footer .descs .desc:nth-child(4),
 input#fifth:checked ~ .footer .descs .desc:nth-child(5) {
   opacity: 1;
 }
+
+input#first:checked ~ .footer .display li:nth-child(1) label div,
+input#second:checked ~ .footer .display li:nth-child(2) label div,
+input#third:checked ~ .footer .display li:nth-child(3) label div,
+input#fourth:checked ~ .footer .display li:nth-child(4) label div,
+input#fifth:checked ~ .footer .display li:nth-child(5) label div {
+  border: 0.5vh solid lightskyblue;
+  background: transparent;
+}
+
+input#first:checked ~ .footer .display li:nth-child(1) label div:hover,
+input#second:checked ~ .footer .display li:nth-child(2) label div:hover,
+input#third:checked ~ .footer .display li:nth-child(3) label div:hover,
+input#fourth:checked ~ .footer .display li:nth-child(4) label div:hover,
+input#fifth:checked ~ .footer .display li:nth-child(5) label div:hover {
+  border: 0.5vh solid #fff;
+  background: transparent;
+}
