@@ -132,3 +132,34 @@ input {
   width: 2vh;
   height: 2vh;
 }
+
+.descs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.desc {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  opacity: 0;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+input#first:checked ~ .footer .descs .desc:nth-child(1),
+input#second:checked ~ .footer .descs .desc:nth-child(2),
+input#third:checked ~ .footer .descs .desc:nth-child(3),
+input#fourth:checked ~ .footer .descs .desc:nth-child(4),
+input#fifth:checked ~ .footer .descs .desc:nth-child(5) {
+  opacity: 1;
+}
